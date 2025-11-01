@@ -1,0 +1,529 @@
+    /* Evita que algo ensanche la página */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+    /* Estilos generales */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    /* Barra superior */
+    nav {
+      background-color: #e88bb1;
+      position: relative; /* para que la imagen centrada se base en este contenedor */
+      height: 45px;
+      display: flex;
+      align-items: center;
+    }
+    /* Lista del menú */
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex; /* Hace que la lista sea horizontal */
+      align-items: center;
+    }
+    /* Elementos de la lista */
+    nav ul li {
+      margin: 0;
+    }
+    /* Enlaces del menú */
+    nav ul li a {
+      display: block;
+      padding: 10px 18px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .boton-imagen {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.boton-imagen img {
+  width: 40px;  /* ajusta el tamaño si lo necesitas */
+  transition: filter 0.3s ease;
+}
+
+/* efecto hover (cambia color) */
+.boton-imagen img:hover {
+  filter: brightness(1.2);
+}
+
+    /* botones de inicio configuraciones y contacto */
+  .menu-img{
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .menu-img{
+    transform: scale(1.1); /* Efecto de aumento el pasar el mause */
+  }
+  
+  /* imagen centrada en la barra */
+  .logo-centro{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;  /* espacio entre logo y texto */
+    background-color: rgb(255, 255, 255); /* fondo */
+    border: 1px solid #e37d9f; /* borde rosa furte */
+    border-radius: 8px; /* esquinas ligeramente redondeadas */
+    padding: 2px 10px; /* es´pacio ente imagen y borde */
+  }
+    /* imagen dentro del rectangulo */
+  .logo-centro img{
+    max-height: 36%;
+    max-width: 36px;
+    height: auto;
+    width: auto;
+    display: block;
+  }
+  .logo-textos{
+    display: flex;
+    flex-direction: column; /* apila los textos verticalmente */
+    justify-content: center;
+  }
+  /* texto al lado del logo */
+  .logo-texto{
+    font-family:Cascadia Code ;
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1px;
+  }
+  .logo-subtexto{
+    font-family:Cascadia Code ;
+    font-size: 12px; /* tamaño */
+    color: black;
+    letter-spacing: 0.5px;
+  }
+  /* === CONTENEDOR DE RECTÁNGULOS === */
+  .contenedor-rectangulos{
+    display: flex;
+    justify-content: center;   /* centra los rectángulos */
+    align-items: center;
+    flex-wrap: nowrap;        /* Evita que se apilen */
+    margin-top: 40px;         /* distancia desde la barra */
+  }
+  
+   .rectangulo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* para que la imagen se vea completa */
+  background-color: #f5f5f5; /* color de fondo si sobra espacio */  
+  }
+
+/* Contenedor de los tres rectángulos */
+.contenedor-rectangulos-texto {
+  display: flex;
+  justify-content: center;    /* Centra los rectángulos en la página */
+  align-items: center;        /* Alinea verticalmente si es necesario */
+  gap: 220px;                  /* 👈 Espacio entre los tres rectángulos */
+  margin-top: 50px;           /* Espacio desde arriba */
+  margin-left: 1%;
+  margin-right: 10%;
+  width: 100%;
+}
+
+/* Cada rectángulo individual */
+.rectangulo-texto {
+ padding: 20px 20px;
+  background-color: #ffffff;  /* Color rosado suave */
+  border: 2px solid #e37d9f;  /* Borde rosa más fuerte */
+  display: flex;
+  justify-content: center;    /* Centra el texto horizontalmente */
+  align-items: center;        /* Centra el texto verticalmente */
+  text-align: center;         /* Centra líneas de texto múltiples */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Sombra suave */
+  cursor: pointer;
+  transition: transform .12 ease, box-shadow .12s;
+  padding: 8px;
+  user-select: none;
+}
+/* --- Contenedor (segunda fila) --- */
+.fila-secundaria {
+  margin-top: 40px; /* espacio entre la primera fila y esta */
+}
+
+/* Reutiliza .contenedor-rectangulos-secundario si quieres que comparta comportamiento,
+   o define uno nuevo (aquí usamos el existente). */
+.contenedor-rectangulos-secundario,
+.fila-secundaria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;      /* separación entre rectángulos (ajusta aquí) */
+  flex-wrap: nowrap; /* mantenerlos en una sola fila; cambia a wrap para que bajen en móvil */
+}
+
+/* Tamaño y estilo de cada rectángulo secundario */
+.rectangulo-pequeno {
+  width: 250px;
+  height: 160px;
+  border: 2px solid #e37d9f;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen dentro del rectángulo: ver completa sin recortar */
+.rectangulo-pequeno img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;      /* cambiar a 'cover' si prefieres llenar/recortar */
+  object-position: center;
+  display: block;
+}
+
+/* Hover opcional */
+.rectangulo-pequeno:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Responsive: en pantallas pequeñas apilar o reducir gap */
+@media (max-width: 880px) {
+  .contenedor-rectangulos-secundario,
+  .fila-secundaria {
+    gap: 18px;
+    flex-wrap: wrap; /* permitirá que los rectángulos salgan a la siguiente fila si no caben */
+  }
+  .rectangulo-pequeno { width: 45%; max-width:260px; } /* dos por fila en móvil */
+  /* si prefieres 1 por fila en móvil: usar width: 100%; */
+}
+
+/* --- Contenedor (tercera fila) --- */
+.fila-terciara {
+  margin-top: 40px; /* espacio entre la primera fila y esta */
+}
+
+/* Reutiliza .contenedor-rectangulos-secundario si quieres que comparta comportamiento,
+   o define uno nuevo (aquí usamos el existente). */
+.contenedor-rectangulos-terciara,
+.fila-terciara {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 63px;      /* separación entre rectángulos (ajusta aquí) */
+  flex-wrap: nowrap; /* mantenerlos en una sola fila; cambia a wrap para que bajen en móvil */
+}
+
+/* Tamaño y estilo de cada rectángulo secundario */
+.rectangulo-pequeno {
+  width: 250px;
+  height: 160px;
+  border: 2px solid #e37d9f;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen dentro del rectángulo: ver completa sin recortar */
+.rectangulo-pequeno img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;      /* cambiar a 'cover' si prefieres llenar/recortar */
+  object-position: center;
+  display: block;
+}
+
+/* Hover opcional */
+.rectangulo-pequeno:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Responsive: en pantallas pequeñas apilar o reducir gap */
+@media (max-width: 880px) {
+  .contenedor-rectangulos-terciara
+  .fila-terciara {
+    gap: 18px;
+    flex-wrap: wrap; /* permitirá que los rectángulos salgan a la siguiente fila si no caben */
+  }
+  .rectangulo-pequeno { width: 45%; max-width:260px; } /* dos por fila en móvil */
+  /* si prefieres 1 por fila en móvil: usar width: 100%; */
+}
+
+/* ---------- MODALES (CORREGIDO) ---------- */
+
+/* overlay: oculto por defecto */
+.modal-overlay {
+  display: none;                /* oculto por defecto */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* fondo oscuro */
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 20px;
+}
+
+/* mostrar overlay cuando tenga la clase "open" */
+.modal-overlay.open {
+  display: flex;
+}
+
+/* caja interna del modal (estilado dentro del overlay) */
+.modal-overlay .modal {
+  background: #fff;
+  width: 100%;
+  max-width: 680px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  overflow: auto;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+/* cuando el overlay está abierto, animamos la caja */
+.modal-overlay.open .modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* cabecera / cuerpo / pie del modal */
+.modal-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title { font-size: 18px; color: var(--rosa, #e37d9f); margin: 0; font-weight: 700; }
+
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.modal-close:hover { background: #f4f4f4; }
+
+.modal-body {
+  padding: 18px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.modal-footer {
+  padding: 12px 18px;
+  border-top: 1px solid #eee;
+  text-align: right;
+  background: #fafafa;
+}
+
+/* Texto dentro del rectángulo */
+.rectangulo-texto p {
+  font-size: 20px;             /* 👈 Tamaño de letra que pediste */
+  color: #000000;                /* Color del texto */
+  margin: 0;
+  padding: 10px;
+  font-family: "Britannic Bold";
+}
+
+.contenedor-rectangulos-secundario {
+  display: flex;
+  justify-content: center; /* Centra entre ellos*/
+  align-items: center;
+  gap: 66px; /* separacion desde la parte superior */
+  flex-wrap: nowrap; /* que no se rompa la fila */
+  margin-top: 60px;
+}
+
+/* tamaño de los rectangulos pequeños */
+.rectangulo-pequeno {
+  width: 320px; 
+  height: 300px;
+  border: 2px solid #e37d9f;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba ( 0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* imagen dentro del rectangulo */
+.rectangulo-pequeno img{
+  width: 99%;
+  height: 99%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* efecto hover */
+.rectangulo-pequeno-hover{
+  transform: scale(1.05);
+}
+/* --- Estilos del carrusel --- */
+/* === CONTENEDOR DEL CARRUSEL === */
+
+.contenedor-rectangulos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+/* === CARRUSEL PRINCIPAL === */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 920px; /* ancho máximo, ajusta a tu gusto */
+  height: 420px;    /* alto del rectángulo (ajusta) */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e37d9f;
+  background-color: #0f0f0f; /* fondo visible mientras carga la primera imagen */
+}
+
+/* contenedor de slides (las imágenes están apiladas) */
+.carousel .slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* cada img ocupa todo el contenedor y está posicionada absolut */
+.carousel .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 100%;
+  transition: opacity 0.6s ease;
+  object-fit: cover;       /* <- usa "cover" para llenar sin deformar */
+  object-position: center;
+  background-color: #e2d5da;
+}
+
+/* imagen visible */
+.carousel .slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Botones prev/next */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.8);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-btn.prev { left: 12px; }
+.carousel-btn.next { right: 12px; }
+.carousel-btn:hover { background: rgba(255,255,255,0.95); }
+
+/* indicadores (puntos) */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 6;
+}
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+.carousel-indicators button.active {
+  background: #e37d9f;
+}
+
+/* Pausa visual en hover (opcional: hace más claro el botón) */
+.carousel:hover .carousel-btn { opacity: 1; }
+
+/* Responsive: reducir altura en pantallas pequeñas */
+@media (max-width: 880px) {
+  .carousel { height: 280px; max-width: 92%; }
+}
+
+.pie-pagina {
+  background-color: #f7bfd5;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 40px; /* 🔹 ajusta el valor según lo que necesites */
+}
+
+.contenido-footer {
+  display: flex;
+  justify-content: space-between; /* texto a la izquierda, imágenes a la derecha */
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.texto-footer {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.imagenes-footer {
+  display: flex;
+  gap: 10px; /* 🔹 ajusta aquí la separación entre imágenes */
+}
+
+.imagenes-footer img {
+  width: 35px; /* tamaño uniforme */
+  height: 35px;
+  object-fit: contain;
+}
+
+
+/* Responsive: apilar en pantallas pequeñas */
+@media (max-width:880px){
+  .rectangulo-pequeno {width: 320px;height: 300px;}
+  .rectangulo-texto{width: 160px;height: 30px}
+  .modal{max-width: 92%;}
+  .modal-title{font-size: 16px;}
+  .contenedor-rectangulos{gap:20px}
+  .rectangulo{width:100%;max-width:520px}
+  .logo-centro{transform:translate(-40%,-50%)} /* ajuste visual */
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diseño Ejecutivo - Portafolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="estilos.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <nav>
+       <!-- Rectángulo centrado con logo y textos -->
+    <div class="logo-centro">
+      <img src="imagenes/estrella.png" alt="logo-centrado">
+      <div class="logo-textos">
+        <span class="logo-texto">Portafolio de evidencias</span>
+        <span class="logo-subtexto">Dana Jazmin G.</span>
+      </div>
+  
+  </div>
+
+  
+    <button id="btn-contacto" class="boton-imagen">
+      <img src="imagenes/contacto.png" alt="Contacto">
+    </button>
+</nav>
+
+
+
+  <!-- SECCIÓN PRINCIPAL -->
+    <section class="contenedor-rectangulos">
+  <article class="rectangulo carousel" id="main-carousel" aria-label="carrusel de imagenes">
+    <div class="slides">    
+    <img src="imagenes/tarjeta 2.png" alt="imagen 1" class="slide">
+    <img src="imagenes/posterizado.jpg" alt="imagen 2" class="slide">
+    <img src="imagenes/Make.png" alt="imagen 3" class="slide">
+    <img src="imagenes/first.png" alt="imagen 4" class="slide">
+     </div>
+    <!--controles (opcionales)-->
+    <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+    <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
+    <!--indicadores (puntos)-->
+    <div class="carousel-indicators" aria-hidden="true"></div>
+    </article>
+</section>
+
+    <!-- FILA DE BOTONES (3 rectángulos) -->
+    <div class="contenedor-rectangulos-texto" role="toolbar" aria-label="opciones">
+      <button class="rectangulo-texto" data-modal="modal-1" aria-haspopup="dialog">
+        <p>INFORMACIÓN</p>
+      </button>
+
+      <button class="rectangulo-texto" data-modal="modal-2" aria-haspopup="dialog">
+        <p>INFORMACIÓN</p>
+      </button>
+
+      <button class="rectangulo-texto" data-modal="modal-3" aria-haspopup="dialog">
+        <p>INFORMACIÓN</p>
+      </button>
+    </div>
+  </main>
+
+<!-- Sección con tres rectángulos alineados -->
+<section class="contenedor-rectangulos-secundario">
+  <article class="rectangulo-pequeno">
+    <img src="imagenes/cartel.png" alt="Imagen 1">
+  </article>
+
+  <article class="rectangulo rectangulo-pequeno">
+    <img src="imagenes/folleto.png" alt="Imagen 2">
+  </article>
+
+  <article class="rectangulo rectangulo-pequeno">
+    <img src="imagenes/invitacion oliver.png" alt="Imagen 3">
+  </article>
+</section>
+
+<!-- NUEVA FILA DE RECTÁNGULOS SECUNDARIOS (sin botones ni modales) -->
+<section class="contenedor-rectangulos-secundario fila-secundaria">
+  <article class="rectangulo rectangulo-pequeno">
+    <img src="imagenes/invitacion 15.png" alt="Secundaria 1">
+  </article>
+
+  <article class="rectangulo rectangulo-pequeno">
+    <img src="imagenes/punto.png" alt="Secundaria 2">
+  </article>
+
+  <article class="rectangulo rectangulo-pequeno">
+    <img src="imagenes/escorpion.png" alt="Secundaria 3">
+  </article>
+</section>
+
+<!-- NUEVA FILA DE RECTÁNGULOS TERCIARIOS  (sin botones ni modales) -->
+<section class="contenedor-rectangulos-terciarios fila-terciara">
+  <article class="rectangulo rectangulo-pequeno">
+    <img src="imagenes/first.png" alt="terciara 1">
+  </article>
+  
+
+  <article class="rectangulo rectangulo-pequeno">
+    <img src="imagenes/Make.png" alt="terciara 2">
+  </article>
+
+  <article class="rectangulo rectangulo-pequeno">
+    <img src="imagenes/tarjeta 1.png" alt="terciara 3">
+  </article>
+</section>
+  <!-- MODALES (ocultos por defecto) -->
+  <div class="modal-overlay" id="modal-1" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="title-modal-1">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="title-modal-1">Trayectoria académica</h3>
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Actualmente cursando la licenciatura de Diseño Grafico en la Universidad Tres Culturas Chalco, 
+          Cursos en universidad tres culturas "Potencia IA"</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn modal-close">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-2" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="title-modal-2">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="title-modal-2">Redes sociales</h3>
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Instagram: dana-jaz31_celeste, Correo: cieloceleste361@gmamail.com</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn modal-close">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-3" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="title-modal-3">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="title-modal-3">Experiencia</h3>
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Soy dedicada a lo que hago, tomo mi idea principal y formulo todas las ideas que me viene a la cabeza tomando en cuenta el criterio y especificaciones que se requiera; cada comentario se toma como criterio de mejora</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn modal-close">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="JavaScript.js"></script>
+  <footer class="pie-pagina">
+  <div class="contenido-footer">
+    <p class="texto-footer">© 2025 Mi Portafolio Dana Jazmin Todos los derechos reservados</p>
+    <div class="imagenes-footer">
+      <img src="imagenes/illustrator.png" alt="icono 1">
+      <img src="imagenes/Photoshop.png" alt="icono 2">
+      <img src="imagenes/after.png" alt="icono 3">
+      <img src="imagenes/animate.png" alt="icono 4">
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
